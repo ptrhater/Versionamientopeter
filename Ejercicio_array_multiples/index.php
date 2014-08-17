@@ -1,6 +1,6 @@
 
 <html> <center><head>Prueba de arreglos multidimensionales</head></center>
-    <form method="post" action="#">
+    <form method="get" action="#">
         <body>
         <center><br><br>
             Formulario <br><br>
@@ -8,9 +8,15 @@
             <input type="text" name="nombre" placeholder="Introdusca Su 1° Nombre" size="30"><br><br>
             <input type="text" name="apellido" placeholder="Introdusca Su 1° Apellido" size="30"><br><br>           
             <select name="combo_sexo">               
+<<<<<<< HEAD
                 <option value="Ingresesusexo" disabled selected>Ingrese su sexo</option>
                 <option value="masculino" >Masculino</option>
                 <option value="femenino" >Femenino</option>
+=======
+                <option name="ingresesusexo" value="Ingresesusexo" disabled selected>Ingrese su sexo</option>
+                <option name="masculino" value="masculino" >Masculino</option>
+                <option name="femenino" value="femenino" >Femenino</option>
+>>>>>>> origin/master
             </select><br><br>
             <pre>Usuario</pre><br>
             Ingrese Su Fecha De Nacimiento<br>
@@ -45,11 +51,18 @@
     
 <?php
 if(isset($_REQUEST['pass'])){
+    
+$activo = null;
+if(isset($_REQUEST['radio1']))
+    $activo = "Activo";
+else
+    $activo = "No activo";
+
 $dim_array = array(     
      "No_mostrar"   => array(
      "Pass"         => $_REQUEST['pass'],
      "Fecha"        => $_REQUEST['fecha'],
-     "Estado_activo_inactivo"  => $_REQUEST['radio1'],['radio2'],
+     "Estado_activo_inactivo"  => $activo,
      "Estado"       => $_REQUEST['estado'],
      "Codigo postal"=> $_REQUEST['cpostal']
         
