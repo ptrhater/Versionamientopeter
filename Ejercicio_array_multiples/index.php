@@ -8,15 +8,9 @@
             <input type="text" name="nombre" placeholder="Introdusca Su 1° Nombre" size="30"><br><br>
             <input type="text" name="apellido" placeholder="Introdusca Su 1° Apellido" size="30"><br><br>           
             <select name="combo_sexo">               
-<<<<<<< HEAD
                 <option value="Ingresesusexo" disabled selected>Ingrese su sexo</option>
-                <option value="masculino" >Masculino</option>
-                <option value="femenino" >Femenino</option>
-=======
-                <option name="ingresesusexo" value="Ingresesusexo" disabled selected>Ingrese su sexo</option>
-                <option name="masculino" value="masculino" >Masculino</option>
-                <option name="femenino" value="femenino" >Femenino</option>
->>>>>>> origin/master
+                <option value="Masculino" >Masculino</option>
+                <option value="Femenino" >Femenino</option>                
             </select><br><br>
             <pre>Usuario</pre><br>
             Ingrese Su Fecha De Nacimiento<br>
@@ -28,13 +22,13 @@
             <pre>Provincia</pre><br>            
             <select name="combo_pais">
                 <option value="ingresesupais" disabled selected>Ingrese Su Pais</option>
-                <option value="guatemala" >Guatemala</option>
-                <option value="nicaragua" >Nicaragua</option>
-                <option value="honduras" >Honduras</option>
-                <option value="costarica" >Costa Rica</option>
-                <option value="elsalvador" >El Salvador</option>
-                <option value="panama" >Panama</option>
-                <option value="belice" >Belice</option>
+                <option value="Guatemala" >Guatemala</option>
+                <option value="Nicaragua" >Nicaragua</option>
+                <option value="Honduras" >Honduras</option>
+                <option value="Costa rica" >Costa Rica</option>
+                <option value="El salvador" >El Salvador</option>
+                <option value="Panama" >Panama</option>
+                <option value="Belice" >Belice</option>
             </select><br><br>
             Ingrese Su estado (Ej. El salvador, San Salvador.)<br>
             <input type="text" name="estado" placeholder="Ingrese Su Estado" size="30"><br><br>
@@ -50,10 +44,11 @@
     
     
 <?php
-if(isset($_REQUEST['pass'])){
-    
+if(isset($_REQUEST['pass']))
+    {    
 $activo = null;
 if(isset($_REQUEST['radio1']))
+    
     $activo = "Activo";
 else
     $activo = "No activo";
@@ -62,7 +57,7 @@ $dim_array = array(
      "No_mostrar"   => array(
      "Pass"         => $_REQUEST['pass'],
      "Fecha"        => $_REQUEST['fecha'],
-     "Estado_activo_inactivo"  => $activo,
+     "Estado"       => $activo,
      "Estado"       => $_REQUEST['estado'],
      "Codigo postal"=> $_REQUEST['cpostal']
         
@@ -80,7 +75,7 @@ $dim_array = array(
     {
         foreach ($value as $k => $v) 
             {
-            echo $v;
+            echo "<br>$k : $v";
             
         }
              
