@@ -20,15 +20,15 @@
             <input type="radio" name="radio1">Activo
             <input type="radio" name="radio2">Inactivo<br><br>            
             <pre>Provincia</pre><br>            
-            <select>
+            <select name="combo_pais">
                 <option value="ingresesupais" disabled selected>Ingrese Su Pais</option>
-                <option name="guatemala" value="guatemala" >Guatemala</option>
-                <option name="nicaragua" value="nicaragua" >Nicaragua</option>
-                <option name="honduras" value="honduras" >Honduras</option>
-                <option name="costarica" value="costarica" >Costa Rica</option>
-                <option name="elsalvador" value="elsalvador" >El Salvador</option>
-                <option name="panama" value="panama" >Panama</option>
-                <option name="belice" value="belice" >Belice</option>
+                <option value="guatemala" >Guatemala</option>
+                <option value="nicaragua" >Nicaragua</option>
+                <option value="honduras" >Honduras</option>
+                <option value="costarica" >Costa Rica</option>
+                <option value="elsalvador" >El Salvador</option>
+                <option value="panama" >Panama</option>
+                <option value="belice" >Belice</option>
             </select><br><br>
             Ingrese Su estado (Ej. El salvador, San Salvador.)<br>
             <input type="text" name="estado" placeholder="Ingrese Su Estado" size="30"><br><br>
@@ -59,8 +59,7 @@ $dim_array = array(
      "Apellido"     => $_REQUEST['apellido'],
      "Sexo"         => $_REQUEST['masculino'],['femenino'],
      "Usuario"      => $_REQUEST['usuario'],
-     "Pais"         => $_REQUEST['guatemala'],$_REQUEST['nicaragua'],$_REQUEST['honduras'],
-                       $_REQUEST['costarica'],$_REQUEST['elsalvador'],$_REQUEST['panama'],$_REQUEST['belice']
+     "Pais"         => $_REQUEST['combo_pais']
         )
      );
 
