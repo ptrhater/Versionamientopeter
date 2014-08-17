@@ -7,10 +7,10 @@
             <pre>Registro</pre><br>
             <input type="text" name="nombre" placeholder="Introdusca Su 1° Nombre" size="30"><br><br>
             <input type="text" name="apellido" placeholder="Introdusca Su 1° Apellido" size="30"><br><br>           
-            <select>               
-                <option name="ingresesusexo" value="Ingresesusexo" disabled selected>Ingrese su sexo</option>
-                <option name="masculino" value="masculino" >Masculino</option>
-                <option name="femenino" value="femenino" >Femenino</option>
+            <select name="combo_sexo">               
+                <option value="Ingresesusexo" disabled selected>Ingrese su sexo</option>
+                <option value="masculino" >Masculino</option>
+                <option value="femenino" >Femenino</option>
             </select><br><br>
             <pre>Usuario</pre><br>
             Ingrese Su Fecha De Nacimiento<br>
@@ -46,7 +46,7 @@
 <?php
 if(isset($_REQUEST['pass'])){
 $dim_array = array(     
-     "No_mostrar"   => array (
+     "No_mostrar"   => array(
      "Pass"         => $_REQUEST['pass'],
      "Fecha"        => $_REQUEST['fecha'],
      "Estado_activo_inactivo"  => $_REQUEST['radio1'],['radio2'],
@@ -54,10 +54,10 @@ $dim_array = array(
      "Codigo postal"=> $_REQUEST['cpostal']
         
          ),      
-     "Mostrar"     => array (
+     "Mostrar"      => array(
      "Nombre"       => $_REQUEST['nombre'],
      "Apellido"     => $_REQUEST['apellido'],
-     "Sexo"         => $_REQUEST['masculino'],['femenino'],
+     "Sexo"         => $_REQUEST['combo_sexo'],
      "Usuario"      => $_REQUEST['usuario'],
      "Pais"         => $_REQUEST['combo_pais']
         )
@@ -65,10 +65,13 @@ $dim_array = array(
 
     foreach ($dim_array as $key => $value)
     {
-    foreach ($value as $k => $v)
-        {
-         echo "<br>$k : $v";       
-        }    
+        foreach ($value as $k => $v) 
+            {
+            echo $v;
+            
+        }
+             
+         
     }
 }
        
