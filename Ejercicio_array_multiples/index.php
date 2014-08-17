@@ -44,6 +44,7 @@
     
     
 <?php
+if(isset($_REQUEST['pass'])){
 $dim_array = array(     
      "No_mostrar"   => array (
      "Pass"         => $_REQUEST['pass'],
@@ -63,12 +64,13 @@ $dim_array = array(
         )
      );
 
-foreach ($dim_array as $key => $value)
-{
-    foreach ($value as $k => $v)
+    foreach ($dim_array as $key => $value)
     {
-      echo "<br>$k : $v";       
-    }    
+    foreach ($value as $k => $v)
+        {
+         echo "<br>$k : $v";       
+        }    
+    }
 }
        
    
