@@ -43,6 +43,24 @@ function suma__($a=0 , $b=0)
 suma__();//como su parametro inicial es $a=0 , $b=0 entonces el resultado sera "0"
 suma__(2,2); //le damos valores y su suma sera 4
 
+/*FUNCIONES CON VALOR DE RETORNO
+ ESTA FUNCIONES SON SIMIALARES A LOS FUNCIONES ANTES VISTAS ASI QUE EN LOS PARAMETROS NO EM METERE MUCHO 
+ * UNA FUNCION TIENE UN VALOR DE RETORNO CUALQUIERA ASIGNADO.
+ * 
+ * COMO EJEMPLO AGARRARE LA FUNCION function suma__($a=0 , $b=0)
+ *  */
 
+function suma__($a=0 , $b=0)
+{
+    $c = $a ;
+    $d = $b;
+    $suma = $c + $d;
+    return $suma;  //para devolver el valor se usa return
+}
+
+//ejemplo de como llamara una funcion que devuelve un valor
+
+$suma = suma_(2,3); //devuelve el resultado en la variable $suma
+echo $suma;//imprime la solucion.
 
 ?>
