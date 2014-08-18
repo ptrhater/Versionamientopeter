@@ -50,7 +50,7 @@ suma__(2,2); //le damos valores y su suma sera 4
  * COMO EJEMPLO AGARRARE LA FUNCION function suma__($a=0 , $b=0)
  *  */
 
-function suma__($a=0 , $b=0)
+function SUM($a=0 , $b=0)
 {
     $c = $a ;
     $d = $b;
@@ -60,7 +60,7 @@ function suma__($a=0 , $b=0)
 
 //ejemplo de como llamara una funcion que devuelve un valor
 
-$suma = suma_(2,3); //devuelve el resultado en la variable $suma
+$suma = SUM(2,3); //devuelve el resultado en la variable $suma
 echo $suma;//imprime la solucion.
 
 ?>
