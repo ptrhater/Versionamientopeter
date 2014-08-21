@@ -28,10 +28,7 @@
           
  }
  
- $a = operaciones($_GET['n1'], $_GET['n2'], $_GET['combo']);
-         echo $a ; 
-         
-     if ( $_GET['combo'] == "elevar")
+  if ( $_GET['combo'] == "elevar")
      {
        echo pow($_GET['n1'],2);   
      }
@@ -41,7 +38,9 @@
      
        
      }
-     
-
+ 
+ $a = operaciones($_GET['n1'], $_GET['n2'], $_GET['combo']);
+         echo $a ; 
+         
 
 ?>
