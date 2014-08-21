@@ -28,16 +28,16 @@
           
  }
  
-<<<<<<< HEAD
+
   if ( $_GET['combo'] == "elevar")
-=======
+
  $a = operaciones($_GET['n1'], $_GET['n2'], $_GET['combo']); 
          echo $a ; 
          
      if ( $_GET['combo'] == "elevar")
->>>>>>> origin/master
+
      {
-       echo pow($_GET['n1'],2);   //numero tiene que estar elevado a la "n" digamos 2^3
+       echo pow($_GET['n1'],$_GET['n2']);   //numero tiene que estar elevado a la "n" digamos 2^3
      }
      elseif ($_GET['combo'] == "raiz") 
      {
