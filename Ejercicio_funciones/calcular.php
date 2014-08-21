@@ -1,9 +1,9 @@
 <?php
  function operaciones($n1 , $n2 , $operacion)
  {
-     $_GET['combo'] = $operacion;
-     $_GET['n1'] = $n1;
-     $_GET['n2'] = $n2;
+     //$_GET['combo'] = $operacion;//estas lineas estan demas
+     //$_GET['n1'] = $n1;//estas lineas estan demas
+     //$_GET['n2'] = $n2;//estas lineas estan demas
      $total = "";
   
              
@@ -28,12 +28,12 @@
           
  }
  
- $a = operaciones($_GET['n1'], $_GET['n2'], $_GET['combo']);
+ $a = operaciones($_GET['n1'], $_GET['n2'], $_GET['combo']); 
          echo $a ; 
          
      if ( $_GET['combo'] == "elevar")
      {
-       echo pow($_GET['n1'],2);   
+       echo pow($_GET['n1'],2);   //numero tiene que estar elevado a la "n" digamos 2^3
      }
      elseif ($_GET['combo'] == "raiz") 
      {
