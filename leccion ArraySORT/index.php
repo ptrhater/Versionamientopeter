@@ -2,6 +2,11 @@
 
 <?php
 
+if(isset($_REQUEST['archivito']))
+{
+    $_FILES['archivito'];
+    echo "entro";
+}
 //SORT: SON FUNCIONES DE ORDENAMIENTO QUE PHP TRAE POR DEFECTO 
 /**
  * 
@@ -17,7 +22,7 @@
 
 
 //sort simple devuelve de forma ascendente marcas de carros
-$cars=array("Volvo","BMW","Toyota");
+/*$cars=array("Volvo","BMW","Toyota");
 sort($cars);
 
 echo "<PRE>";
@@ -42,7 +47,22 @@ arsort($arreglo);
 //descendente
 echo "<PRE>";
 print_r($arreglo);
-echo "</PRE><br><br>";
+echo "</PRE><br><br>";*/
+
+
 
 ?>
+
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <form>
+            <input type="file" name="archivito" id="archivito" value="seleccionar " />
+             <input type="submit" value="enviar" />
+        </form>
+       
+    </body>
+</html>
 
