@@ -27,7 +27,7 @@ class ARCHIVO
     
     function __destruct()
     {
-      
+       
     }
     
     public function SetFileName($att_name)
@@ -106,6 +106,8 @@ class ARCHIVO
         
         return $arreglo_file;
     }
+    
+    
     
 
 }

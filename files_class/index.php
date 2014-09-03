@@ -1,7 +1,7 @@
 
 <?php
     include 'class.archivo.php';
-    $file = new ARCHIVO("Imagenes");
+    $file = new ARCHIVO("imagenes_sexys");
     $arr = $file->FindFiles();
     echo"<PRE>";
     print_r($arr);
@@ -36,7 +36,9 @@
                          <input type="file" id="archivo1" name="archivo1" value="" />
                     </td>
                 </tr>
-                 <tr><td></td></tr>
+                <tr><td>
+                      <input type="file" id="archivo2" name="archivo2" value="" />
+                    </td></tr>
                  <tr><td></td></tr>
                 <tr>
                     <td>
