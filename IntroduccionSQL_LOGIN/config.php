@@ -3,7 +3,7 @@
 
 $dbuser = "root";
 $dbpass = "";
-$db = "personal_info";
+$db = "info_profiles";
 $dbserver = "localhost";
 
 ?>
