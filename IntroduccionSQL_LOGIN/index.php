@@ -37,16 +37,20 @@ else if(isset($_POST['cmd_registro']))
       mysql_select_db($db , $conn);
       $result = mysql_query("Select * from info_profiles where usuario='$user' and password='$pass'" , $conn);
       
-      if($data = mysql_fetch_array($result, MYSQL_ASSOC))
+     if($data = mysql_fetch_array($result, MYSQL_ASSOC))
       {
           $is_log = true;
           
-              $_SESSION['usuario'] = array(                  
+              $_SESSION['usuario'] = array(
                   $data["id_login"],
                   $data["usuario"],
                   $data["password"]
               );
-      
+        /*$result = mysql_query("Select * from usuario where id_login=" . $data["id_login"]  , $conn);
+        if($data = mysql_fetch_array($result, MYSQL_ASSOC))
+        {
+            print_r($data);
+        }*/
       }
       
       mysql_close($conn);
@@ -59,7 +63,7 @@ else if(isset($_POST['cmd_registro']))
 
   function registro()
   {
-      //header("Location:registro.php");
+     header("Location:registro.php");
   }
 ?>
 
